@@ -1,0 +1,5 @@
+{
+  "installCommand": "cd ../.. && npm install -g pnpm && pnpm install",
+  "buildCommand": "cd ../.. && pnpm --filter @cleaning/pwa build",
+  "outputDirectory": "dist"
+}
