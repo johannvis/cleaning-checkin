@@ -1,5 +1,6 @@
 {
   "buildCommand": "npm install -g pnpm && pnpm install && pnpm --filter @cleaning/pwa build",
   "outputDirectory": "apps/pwa/dist",
-  "installCommand": "echo 'skip'"
+  "installCommand": "echo 'skip'",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
