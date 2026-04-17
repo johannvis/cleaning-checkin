@@ -146,7 +146,7 @@ export default function CheckInPage() {
           <button
             className="btn btn-primary btn-full mt-4"
             onClick={handleCheckIn}
-            disabled={loading || gpsStatus === 'checking'}
+            disabled={loading}
           >
             {loading ? 'Checking in…' : 'Check In'}
           </button>
