@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm install -g pnpm && pnpm install && pnpm --filter @cleaning/pwa build",
+  "buildCommand": "npm install -g pnpm && pnpm install && cd apps/pwa && npx vite build",
   "outputDirectory": "apps/pwa/dist",
   "installCommand": "echo 'skip'",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
