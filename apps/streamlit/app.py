@@ -210,13 +210,13 @@ elif page == "📋 Reports":
                     st.write("**Before**")
                     cols = st.columns(min(len(before), 4))
                     for i, p in enumerate(before):
-                        url = sb.storage.from_("photos").get_public_url(p['storage_path'])
+                        url = sb.storage.from_("photos").create_signed_url(p['storage_path'], 3600)['signedURL']
                         cols[i % 4].image(url, use_column_width=True)
                 if after:
                     st.write("**After**")
                     cols = st.columns(min(len(after), 4))
                     for i, p in enumerate(after):
-                        url = sb.storage.from_("photos").get_public_url(p['storage_path'])
+                        url = sb.storage.from_("photos").create_signed_url(p['storage_path'], 3600)['signedURL']
                         cols[i % 4].image(url, use_column_width=True)
             else:
                 st.caption("No photos")
